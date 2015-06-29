@@ -1,0 +1,8 @@
+- ClearTK-Annotator subclass of JCasAnnotator_Implbase
+	- process(JCas)-Method
+		1) extract features
+		2) pass thm to classifiers
+	- provides useful methods and instance variables -> available to subclasses:
+		1) isTrainging() (training or classifier)
+		2) dataWriter
+		3) classifier

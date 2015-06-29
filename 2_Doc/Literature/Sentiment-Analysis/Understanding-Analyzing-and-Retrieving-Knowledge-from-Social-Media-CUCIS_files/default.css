@@ -1,0 +1,225 @@
+BODY {
+	background-color: #FFF;
+	font-size: .9 em;
+}
+
+#topContainer {
+	position: relative;
+	left: 10px;
+	width: 950px;
+	height: 180px;
+	background-color: #D2D2D4;
+	background-position: right;
+	background-repeat: repeat;
+	margin: 0px;
+	padding: 0px;
+}
+#topSquare {
+	float:left;
+	width: 285px;
+        height: 232px;
+} 
+#titleText {
+	width: 210px;
+	text-align: left;
+	display: block;
+	position: absolute;
+	right: 523px;
+	bottom: 0px;
+	font: bold 1.2em/1.2em Arial;
+	font-variant: small-caps;
+	color: #060B48;
+	left: 154px;
+	top: 24px;
+	height: 113px;
+}
+A.topLink {
+	width: 103px;
+        height: 232px;
+	margin: 0px;
+        padding: 0px;
+	float: left;
+}
+#contactLink {
+	background-image: url('../images/contact_link.jpg');
+} A#contactLink:hover {
+	background-image: url('../images/contact_lit.jpg');
+}
+#publicationsLink {
+	background-image: url('../images/publications_link.jpg');
+} A#publicationsLink:hover {
+	background-image: url('../images/publications_lit.jpg');
+}
+#projectsLink {
+	background-image: url('../images/projects_link.jpg');
+} A#projectsLink:hover {
+	background-image: url('../images/projects_lit.jpg');
+}
+#membersLink {
+	background-image: url('../images/members_link.jpg');
+} A#membersLink:hover {
+	background-image: url('../images/members_lit.jpg');
+}
+#top_right {
+	float: left;
+	width: 41px;
+	height: 232px;
+}
+/**** top navigation ****/
+#navcontainer {
+	margin-left: 10px;
+	overflow: hidden;
+	width: 950px;
+	background-color: #D2D2D4;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+}
+#navlist {
+	list-style-type: none;
+	margin: 0;
+	margin-left: 215px;
+}
+#navlist li {
+	border-left: 1px solid #83438a;
+	float: left;
+	margin: 0 .5em 0 -.5em;
+	padding: 0 .5em 0 .5em;
+	text-transform: uppercase;
+	color: #FFF;
+}
+#navlist a {
+	color: #353895;
+	text-decoration: none;
+}
+#navlist a:hover {
+	text-decoration: inherit;
+}
+#main {
+	width: 950px;
+	font: .8em/1.5em Tahoma;
+	background-color: #FFF;
+}
+#mainLeft {
+	float: left;
+	width: 180px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #D2D2D4;
+	margin-left: 10px;
+	padding: .3em .3em .3em .3em;
+}
+#mainRight {
+	margin-left: 210px;
+	margin-right: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+#bottomStrip {
+	background-color: #520063;
+	position: relative;
+	width: 950px;
+	padding: 4px 0px 4px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: white;
+	background-repeat: repeat;
+	float: bottom;
+}
+#bottomStrip a:link {
+	color: white;
+	font-weight: bold;
+}
+#bottomStrip img {
+	float: left;
+        text-align:center;
+	vertical-align: middle;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	margin-left: 4px;
+}
+#bottomStrip td A:visited {
+	color: #CCF;
+	font-weight: bold;
+}
+.tabBox { 
+	margin-right: 12px;
+	margin-top: 8px;
+	font-size: 12px;
+	color: #5290B9;
+	font-family: Arial;
+	font-weight: bold;
+}
+.tabBox .tabCurve {
+	position:relative;
+	top: 1px;
+	margin: 0px;
+	padding: 0px 0px 0px 3px;
+	display: block;
+	background-color: #323259;
+	font-weight: bold;
+	color: #FFF;
+	font-size: 12px;
+}
+.tabBox H3 {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0px;
+	padding: 3px 12px;
+	font: bold 1em Tahoma;
+}
+.tabBox .tabBody {
+	background-color: #CCF;
+	color: black;
+	border: 1px solid #7A4539;
+	border-bottom: 0px;
+	font: .85em/1.4em Arial;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+.tabBox .tabBody A:link {
+	color: #30F;
+	font-weight: bold;
+}
+.tabBox .tabBody A:visited {
+	color: #30F;
+	font-weight: bold;
+}
+.tabBox .tabBody UL {
+	margin: 0px; padding: 0px;
+	margin-left: 12px;
+}
+.tabBox .tabBody UL LI {
+	line-height: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.tabBox .tabFooter {
+	background: #30C;
+	border: 1px solid #7A4539;
+	border-top: 0px;
+	text-align: right;
+	padding: 3px 0px;
+	background-color: #323259;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .8em;
+}
+.tabBox .tabFooter A {
+	background: #6C2E2E url('../images/tabBottomRound.gif') no-repeat;
+	padding: 3px 16px;
+}
+	
+.tabBox .tabFooter A:LINK, .tabBox .tabFooter A:VISITED {
+	color: white;
+	text-decoration: none;
+	background-color: #323259;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}

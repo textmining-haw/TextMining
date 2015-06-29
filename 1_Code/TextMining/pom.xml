@@ -1,0 +1,424 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.textmining</groupId>
+	<artifactId>TextMining</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>TextMining-LernendeAgenten</name>
+	<description>Lernende Agenten - Projekt an der HAW Hamburg SS 2015</description>
+	<url>http://textmining.informatik.haw-hamburg.de/wiki</url>
+	<developers>
+		<developer>
+			<id>fabian.reiber</id>
+			<email>fabian.reiber@haw-hamburg.de</email>
+			<name>Fabian Reiber</name>
+		</developer>
+		<developer>
+			<id>David.Laule</id>
+			<email>david.laule@haw-hamburg.de</email>
+			<name>David Laule</name>
+		</developer>
+		<developer>
+			<id>Francis.Opoku</id>
+			<email>francis.opoku@haw-hamburg.de</email>
+			<name>Francis Opoku</name>
+		</developer>
+		<developer>
+			<id>NgocHuyen.Nguyen</id>
+			<email>ngochuyen.nguyen@haw-hamburg.de</email>
+			<name>Ngoc Huyen Nguyen</name>
+		</developer>
+	</developers>
+	<properties>
+		<textmining.version>1.0.0</textmining.version>
+		<cleartk.version>2.0.0</cleartk.version>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+
+		<!-- General Dependencies -->
+
+		<dependency>
+			<groupId>org.cleartk</groupId>
+			<artifactId>cleartk-ml</artifactId>
+			<version>${cleartk.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cleartk</groupId>
+			<artifactId>cleartk-util</artifactId>
+			<version>${cleartk.version}</version>
+		</dependency>
+			<dependency>
+				<groupId>org.tinylog</groupId>
+				<artifactId>tinylog</artifactId>
+				<version>1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cleartk</groupId>
+				<artifactId>cleartk-stanford-corenlp</artifactId>
+				<version>${cleartk.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cleartk</groupId>
+				<artifactId>cleartk-type-system</artifactId>
+				<version>${cleartk.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cleartk</groupId>
+				<artifactId>cleartk-eval</artifactId>
+				<version>${cleartk.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cleartk</groupId>
+				<artifactId>cleartk-opennlp-tools</artifactId>
+				<version>${cleartk.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cleartk</groupId>
+				<artifactId>cleartk-snowball</artifactId>
+				<version>${cleartk.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.uima</groupId>
+				<artifactId>uimaj-core</artifactId>
+				<version>2.5.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.uima</groupId>
+				<artifactId>uimaj-document-annotation</artifactId>
+				<version>2.5.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.uima</groupId>
+				<artifactId>uimafit-core</artifactId>
+				<version>2.0.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cleartk</groupId>
+				<artifactId>cleartk-ml-libsvm</artifactId>
+				<version>${cleartk.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cleartk</groupId>
+				<artifactId>cleartk-token</artifactId>
+				<version>${cleartk.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.plexus</groupId>
+				<artifactId>plexus-utils</artifactId>
+				<version>1.5.12</version>
+			</dependency>
+			<dependency>
+    <groupId>com.lexicalscope.jewelcli</groupId>
+    <artifactId>jewelcli</artifactId>
+    <version>0.8.9</version>
+</dependency>
+			<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>3.12</version>
+</dependency>
+			<!-- TEST DEPENDENCIES -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>3.8.1</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>cc.mallet</groupId>
+				<artifactId>mallet</artifactId>
+				<version>2.0.7</version>
+			</dependency>
+		</dependencies>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>2.5</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>2.9</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-gpg-plugin</artifactId>
+					<version>1.5</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.5.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>3.3</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.3</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.2.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.17</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.uima</groupId>
+					<artifactId>jcasgen-maven-plugin</artifactId>
+					<version>2.5.0</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>generate</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.cleartk</groupId>
+										<artifactId>
+											consistent-versions-plugin
+										</artifactId>
+										<versionRange>
+											[0.5.0-SNAPSHOT,)
+										</versionRange>
+										<goals>
+											<goal>
+												check-version-consistency
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-enforcer-plugin
+										</artifactId>
+										<versionRange>
+											[1.0,)
+										</versionRange>
+										<goals>
+											<goal>enforce</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
+					<descriptors>
+						<descriptor>zip.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<configuration>
+					<!-- switch on dependency-driven aggregation -->
+					<includeDependencySources>true</includeDependencySources>
+
+					<!-- Suppress timestamp for minimal diffs when re-generating -->
+					<notimestamp>true</notimestamp>
+
+					<!-- Allow tags added by JCasGen -->
+					<tags>
+						<tag>
+							<name>generated</name>
+							<placement>a</placement>
+							<head>Generated</head>
+						</tag>
+						<tag>
+							<name>ordered</name>
+							<placement>a</placement>
+							<head>Ordered</head>
+						</tag>
+						<tag>
+							<name>modifiable</name>
+							<placement>a</placement>
+							<head>Modifiable</head>
+						</tag>
+					</tags>
+
+					<!-- Link to standard Java HTML javadoc -->
+					<linksource>true</linksource>
+
+					<!-- Don't include deprecated APIs -->
+					<nodeprecated>true</nodeprecated>
+
+					<!-- Links to all dependency javadocs -->
+					<links>
+						<!-- berkeley parser -->
+						<!-- (none available) -->
+						<!-- commons-io -->
+						<link>http://commons.apache.org/io/apidocs/</link>
+
+						<!-- commons-lang -->
+						<link>http://commons.apache.org/lang/apidocs/</link>
+
+						<!-- commons-logging -->
+						<link>http://commons.apache.org/logging/apidocs/</link>
+
+						<!-- guava -->
+						<link>http://docs.guava-libraries.googlecode.com/git-history/v10.0/javadoc/</link>
+
+						<!-- jVinci, uima-* -->
+						<link>http://uima.apache.org/d/uimaj-2.3.1/api/</link>
+
+						<!-- jdom -->
+						<link>http://www.jdom.org/docs/apidocs/</link>
+
+						<!-- joda-time -->
+						<link>http://joda-time.sourceforge.net/apidocs</link>
+
+						<!-- jsr173_api -->
+						<!-- (none available) -->
+
+						<!-- jsr305 -->
+						<link>http://findbugs.sourceforge.net/api/</link>
+
+						<!-- junit -->
+						<link>http://junit.org/apidocs/</link>
+
+						<!-- jwnl -->
+						<!-- (none available) -->
+
+						<!-- liblinear -->
+						<!-- (none available) -->
+
+						<!-- libsvm -->
+						<!-- (none available) -->
+
+						<!-- log4j -->
+						<link>http://logging.apache.org/log4j/1.2/apidocs/</link>
+
+						<!-- lucene-snowball -->
+						<link>http://lucene.apache.org/java/3_0_3/api/all/</link>
+
+						<!-- mallet -->
+						<link>http://mallet.cs.umass.edu/api/</link>
+
+						<!-- malt -->
+						<link>http://maltparser.org/api/</link>
+
+						<!-- opennlp-maxent -->
+						<link>http://incubator.apache.org/opennlp/documentation/apidocs/opennlp-maxent/</link>
+
+						<!-- opennlp-tools -->
+						<link>http://incubator.apache.org/opennlp/documentation/apidocs/opennlp-tools/</link>
+
+						<!-- spring-core -->
+						<link>http://static.springsource.org/spring/docs/3.0.3.RELEASE/javadoc-api/</link>
+
+						<!-- stanford-corenlp -->
+						<link>http://nlp.stanford.edu/nlp/javadoc/javanlp/</link>
+
+						<!-- stax -->
+						<!-- (none available) -->
+
+						<!-- stax-api -->
+						<!-- (none available) -->
+
+						<!-- trove4j -->
+						<link>http://trove4j.sourceforge.net/javadocs/</link>
+
+						<!-- uimafit -->
+						<link>http://uimafit.googlecode.com/svn/tags/uimafit-parent-1.2.0/apidocs/</link>
+
+						<!-- xalan -->
+						<link>http://xml.apache.org/xalan-j/apidocs/</link>
+
+						<!-- xerces -->
+						<link>https://xerces.apache.org/xerces2-j/javadocs/api/</link>
+
+						<!-- xml-apis -->
+						<!-- (none available) -->
+
+						<!-- xom -->
+						<link>http://xom.nu/apidocs/</link>
+					</links>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.4.0</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>

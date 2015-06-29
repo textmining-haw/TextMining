@@ -1,0 +1,2 @@
+LibSVM: http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+Mallet: http://mallet.cs.umass.edu/
