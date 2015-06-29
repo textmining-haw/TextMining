@@ -17,15 +17,11 @@ buildNumber.properties
 *.jar
 *.war
 *.ear
-/1_Code/cleartk/cleartk-examples/target/
-/1_Code/cleartk/cleartk-summarization/target/
-/1_Code/cleartk/cleartk-test-util/target/
-/1_Code/cleartk/cleartk-type-system/target/
-1_Code/cleartk/TextMining/data/input/
+1_Code/TextMining/data/input/
 *.~lock*
-!/1_Code/cleartk/TextMining/lib/stanford-corenlp-3.2.0.jar
-!/1_Code/cleartk/TextMining/target/svm_classification/models/model.jar
-!/1_Code/cleartk/TextMining/lib/tinylog.jar
+!/1_Code/TextMining/lib/stanford-corenlp-3.2.0.jar
+!/1_Code/TextMining/target/svm_classification/models/model.jar
+!/1_Code/TextMining/lib/tinylog.jar
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
@@ -71,5 +67,5 @@ local.properties
 .texlipse
 
 #naive-bayes
-/1_Code/cleartk/TextMining/lib/poi-3.12
-!/1_Code/cleartk/TextMining/lib/poi-3.12/poi-3.12-20150511.jar
+/1_Code/TextMining/lib/poi-3.12
+!/1_Code/TextMining/lib/poi-3.12/poi-3.12-20150511.jar
